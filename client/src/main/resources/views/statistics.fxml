@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bgreen.app.interfaces.Statistics"
+            prefHeight="400.0"
+            fx:id="bp"
+>
+    <padding>
+        <Insets top="20" left="30" bottom="20" right="30"/>
+    </padding>
+    <top>
+        <Label text="Statistics" styleClass="tab-title-settings" fx:id="tabTitle">
+
+        </Label>
+    </top>
+    <left>
+        <ComboBox fx:id="dateRange" styleClass="combo-box-statistics">
+
+        </ComboBox>
+    </left>
+    <center>
+        <VBox styleClass="vbox-statistics" fx:id="vb">
+            <padding>
+                <Insets top="10" left="10" bottom="10" right="10"/>
+            </padding>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="25"/>
+                    <ColumnConstraints percentWidth="20"/>
+                    <ColumnConstraints percentWidth="55">
+                    </ColumnConstraints>
+                </columnConstraints>
+                <BarChart fx:id="dailyChart"
+                          legendVisible="false"
+                          title="Daily Points"
+                          visible="true"
+                          prefWidth="750"
+                          prefHeight="300"
+                          styleClass="chart-area"
+                          GridPane.columnIndex="0"
+                          GridPane.rowIndex="0"
+                          GridPane.columnSpan="4"
+                          GridPane.rowSpan="4"
+                          GridPane.fillWidth="true"
+                >
+                    <xAxis>
+                       <CategoryAxis fx:id="xAxisDay" tickLabelRotation="20"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxisDay" minorTickVisible="false"/>
+                    </yAxis>
+                </BarChart>
+                <BarChart fx:id="weeklyChart"
+                          legendVisible="false"
+                          title="Weekly Points"
+                          visible="false"
+                          prefWidth="750"
+                          prefHeight="380"
+                          styleClass="chart-area"
+                          GridPane.columnIndex="0"
+                          GridPane.rowIndex="0"
+                          GridPane.columnSpan="4"
+                          GridPane.rowSpan="4"
+                          GridPane.fillWidth="true"
+                >
+                    <xAxis>
+                        <CategoryAxis fx:id="xAxisWeek" tickLabelRotation="20"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxisWeek" minorTickVisible="false"/>
+                    </yAxis>
+                </BarChart>
+                <BarChart fx:id="monthlyChart"
+                          legendVisible="false"
+                          title="Monthly Points"
+                          visible="false"
+                          prefWidth="750"
+                          prefHeight="380"
+                          styleClass="chart-area"
+                          GridPane.columnIndex="0"
+                          GridPane.rowIndex="0"
+                          GridPane.columnSpan="4"
+                          GridPane.rowSpan="4"
+                          GridPane.fillWidth="true"
+                >
+                    <xAxis>
+                        <CategoryAxis fx:id="xAxisMonth" tickLabelRotation="20"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxisMonth" minorTickVisible="false"/>
+                    </yAxis>
+                </BarChart>
+            </GridPane>
+            <HBox>
+                <VBox spacing="3" alignment="center" styleClass="gaugeBox">
+                    <!--                           title="Daily goal"-->
+<!--                                               unit="%"-->
+                    <Gauge fx:id="gaugeDaily"
+                           title="Daily goal"
+                           unit="\%"
+                           valueColor="#663399"
+                           titleColor="#663399"
+                           unitColor="#663399"
+                           decimals="1"
+                           maxValue="100"
+                           prefHeight="200"
+                           prefWidth="200"
+                           barBackgroundColor="#c8e6c9"
+                           barColor="#663399"
+                           animated="true"
+                           styleClass="gauge">
+
+                    </Gauge>
+                    <Button text="Change daily goal" fx:id="dailyGoalButton" translateY="10" styleClass="statButton">
+
+                    </Button>
+                </VBox>
+                <VBox spacing="3" alignment="center" styleClass="gaugeBox">
+                    <Gauge fx:id="gaugeWeekly"
+                           title="Weekly goal"
+                           unit="\%"
+                           valueColor="#669933"
+                           titleColor="#669933"
+                           unitColor="#669933"
+                           decimals="1"
+                           maxValue="100"
+                           prefHeight="200"
+                           prefWidth="200"
+                           barBackgroundColor="#c8e6c9"
+                           barColor="#669933"
+                           animated="true"
+                           styleClass="gauge"
+                    >
+
+                    </Gauge>
+                    <Button text="Change weekly goal" fx:id="weeklyGoalButton" translateY="10" styleClass="statButton">
+
+                    </Button>
+                </VBox>
+                <VBox spacing="3" alignment="center" styleClass="gaugeBox">
+                    <Gauge fx:id="gaugeMonthly"
+                           title="Monthly goal"
+                           unit="\%"
+                           valueColor="#994d33"
+                           titleColor="#994d33"
+                           unitColor="#994d33"
+                           decimals="1"
+                           maxValue="100"
+                           prefHeight="200"
+                           prefWidth="200"
+                           barBackgroundColor="#c8e6c9"
+                           barColor="#994d33"
+                           animated="true"
+                           styleClass="gauge"
+                    >
+
+                    </Gauge>
+                    <Button text="Change monthly goal" fx:id="monthlyGoalButton" translateY="10" styleClass="statButton">
+
+                    </Button>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

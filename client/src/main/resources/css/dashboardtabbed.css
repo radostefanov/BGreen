@@ -1,0 +1,56 @@
+.tab-header-background {
+    -fx-background-color: #4caf50;
+}
+
+.tab {
+    -fx-background-color: #4caf50;
+    -fx-border-width: 0px 2px 0px 0px;
+    -fx-border-color: #388e3c;
+
+    -fx-padding: 0 0 0 0;
+    -fx-background-radius: 0.0;
+    -fx-background-insets: 0.0;
+    -fx-text-alignment: center;
+    -fx-text-fill: #c8e6c9;
+}
+
+.tab-title {
+    -fx-text-fill: #c8e6c9;
+    -fx-font-size: 12;
+}
+
+
+.tab *.tab-label {
+    /*-fx-rotate: 90;*/
+    -fx-font-size: 13;
+}
+
+.lasttab {
+    -fx-border-width: 0px 2px 0px 2px;
+}
+
+.tab-pane {
+    -fx-padding: 0 0 0 0;
+    -fx-background-radius: 0.0;
+    -fx-background-insets: 0.0;
+    -fx-background-color: #c8e6ca;
+    -fx-text-alignment: center;
+}
+
+.tab:hover {
+    -fx-background-color: #388e3c;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #388e3c;
+    -fx-text-fill: #e7f1e7;
+}
+
+.tab-pane *.tab-header-area{
+    -fx-background-insets: 0, 0 0 10;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
+
+.tab-content-area {
+    -fx-text-fill: black;
+}

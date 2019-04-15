@@ -1,0 +1,57 @@
+.label-friends {
+    -fx-padding: 5px, 0px, 5px, 0px;
+    -fx-text-fill: grey;
+    -fx-font-size: 14pt;
+}
+
+.add-button {
+    -fx-translate-x: 288px;
+    -fx-translate-y: 16px;
+    -fx-pref-height: 60px;
+    -fx-pref-width: 150px;
+}
+
+.friends-table {
+    -fx-background-color: #c8e6ca;
+    -fx-translate-x: 140px;
+    -fx-translate-y: 35px;
+}
+
+.friends-column {
+    -fx-background-color: #c8e6ca;
+    -fx-text-alignment: left;
+    -fx-border-color: #666;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5 0 5 0;
+    -fx-alignment: CENTER;
+}
+
+.friends-textfield {
+    -fx-translate-x: 140px;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: #00a95a;
+}
+
+.friends-description {
+    -fx-translate-x: 140px;
+}
+
+.friends-delete {
+    -fx-translate-y: 1px;
+    -fx-background-color: #aa1c00;
+    -fx-pref-height: 20px;
+}
+
+.friends-delete:hover {
+    -fx-background-color: #d80202;
+}
+
+.btn-decline{
+
+    -fx-background-color: #aa1c00;
+}
+
+.btn-decline:hover {
+    -fx-background-color: #d80202;
+}

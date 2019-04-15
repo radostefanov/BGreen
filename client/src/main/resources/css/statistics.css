@@ -1,0 +1,100 @@
+.vbox-statistics {
+    -fx-padding: 30px;
+}
+
+.chart-bar {
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+    -fx-opacity: 0.75;
+}
+
+.chart-bar:hover {
+    -fx-opacity: 1.0;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.data0.chart-bar { -fx-bar-fill: #e6194B; }
+
+.data1.chart-bar { -fx-bar-fill: #f58231; }
+
+.data2.chart-bar { -fx-bar-fill: #ffe119; }
+
+.data3.chart-bar { -fx-bar-fill: #bfef45; }
+
+.data4.chart-bar { -fx-bar-fill: #3cb44b; }
+
+.data5.chart-bar { -fx-bar-fill: #aaffc3; }
+
+.data6.chart-bar { -fx-bar-fill: #42d4f4; }
+
+.data7.chart-bar { -fx-bar-fill: #4363d8; }
+
+.data8.chart-bar { -fx-bar-fill: #000075; }
+
+.data9.chart-bar { -fx-bar-fill: #911eb4; }
+
+.data10.chart-bar { -fx-bar-fill: #f032e6; }
+
+.data11.chart-bar { -fx-bar-fill: #a9a9a9; }
+
+.data12.chart-bar { -fx-bar-fill: #000000; }
+
+.chart-area {
+    -fx-horizontal-grid-lines-visible: true;
+    -fx-vertical-grid-lines-visible: true;
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.chart-content {
+    -fx-padding: 10px;
+}
+
+.chart-title {
+    -fx-font-size: 16pt;
+    -fx-text-fill: grey;
+}
+
+.axis {
+    -fx-minor-tick-visible: false;
+    -fx-tick-label-font-size: 0.8em;
+    -fx-tick-label-fill: grey;
+}
+
+.combo-box-statistics {
+    -fx-translate-y: 200px;
+}
+
+.gaugeBox {
+    /*272C32 #4caf50*/
+    -fx-background-color: #c8e6c9;
+    -fx-border-color: #c8e6c9;
+    -fx-background-size: 247.5, 200;
+    -fx-padding: 10px;
+    -fx-margin: 5px;
+    -fx-translate-y: 10;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+/*.gauge:hover {*/
+/*    -fx-scale-x: 1.05;*/
+/*    -fx-scale-y: 1.05;*/
+/*}*/
+
+.statButton {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5;
+    -fx-text-fill: grey;
+    -fx-max-height: 5px;
+    -fx-font-size: 0px;
+}
+
+.statButton:hover {
+    -fx-background-color: #EDEDED;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}

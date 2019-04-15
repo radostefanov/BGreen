@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.bgreen.app.interfaces.DashBoard"
+          prefHeight="400.0"
+          styleClass="tabpane"
+          fx:id="grid"
+
+>
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="25"/>
+        <ColumnConstraints percentWidth="20"/>
+        <ColumnConstraints percentWidth="55">
+        </ColumnConstraints>
+    </columnConstraints>
+
+    <HBox>
+        <VBox minWidth="195" styleClass="vbox-dashboard">
+            <Label text="Goals" styleClass="label-goal">
+                <padding>
+                    <Insets top="5" bottom="20"/>
+                </padding>
+            </Label>
+            <Rectangle styleClass="rectangle-dashboard" height="3" width="180" fill="black"
+            arcHeight="6" arcWidth="6" translateX="7.5">
+            </Rectangle>
+            <Label text="Daily goal:" styleClass="label-fixed">
+                <padding>
+                    <Insets top="10"/>
+                </padding>
+            </Label>
+            <Label fx:id="dailyGoalLabel" styleClass="label-dashboard">
+
+            </Label>
+            <Label text="Weekly goal:" styleClass="label-fixed">
+
+            </Label>
+            <Label fx:id="weeklyGoalLabel" styleClass="label-dashboard">
+
+            </Label>
+            <Label text="Monthly goal:" styleClass="label-fixed">
+
+            </Label>
+            <Label fx:id="monthlyGoalLabel" styleClass="label-dashboard">
+
+            </Label>
+        </VBox>
+        <PieChart labelsVisible="true" labelLineLength="10" legendSide="right" animated="true"
+                  legendVisible="true" minWidth="500" prefWidth="600" prefHeight="150" fx:id="activityStatistics"
+                  GridPane.columnIndex="0" GridPane.rowIndex="0"
+                  GridPane.columnSpan="3">
+
+        </PieChart>
+    </HBox>
+
+    <Label GridPane.columnIndex="5" GridPane.rowIndex="0" text="points saved total" fx:id="totalSaved">
+        <padding>
+            <Insets left="-275" top="-200"/>
+        </padding>
+    </Label>
+
+    <Label text="Add a new activity" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2">
+        <padding>
+            <Insets top="30"/>
+        </padding>
+    </Label>
+
+    <ComboBox fx:id="activitiesList"
+              GridPane.columnIndex="0" GridPane.rowIndex="2"
+              GridPane.columnSpan="2"
+                onAction="#activitiesListOnAction">
+
+        <GridPane.margin>
+            <Insets bottom="10"/>
+        </GridPane.margin>
+
+    </ComboBox>
+
+    <GridPane fx:id="mealContainer" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"
+              GridPane.rowSpan="5" GridPane.fillWidth="true" visible="false">
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50"/>
+            <ColumnConstraints percentWidth="50"/>
+        </columnConstraints>
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="3">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            How vegan was your meal?
+        </Label>
+
+        <Label fx:id="sliderValue" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="RIGHT">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            Small amount of meat
+        </Label>
+
+        <Slider min="0" max="100" value="70" blockIncrement="5"
+                GridPane.columnIndex="0" GridPane.rowIndex="4"
+                GridPane.columnSpan="2"
+                fx:id="veganSlider">
+
+            <padding>
+                <Insets top="10"/>
+            </padding>
+
+        </Slider>
+
+    </GridPane>
+
+    <GridPane fx:id="travelContainer" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"
+              GridPane.rowSpan="2" GridPane.fillWidth="true" visible="false">
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="100"/>
+        </columnConstraints>
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="3">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            How much did you travel? (In km)
+        </Label>
+
+        <TextField GridPane.columnIndex="0" GridPane.rowIndex="4" fx:id="travelDistance">
+
+        </TextField>
+
+    </GridPane>
+
+    <GridPane fx:id="houseContainer" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"
+              GridPane.rowSpan="5" GridPane.fillWidth="true" visible="false">
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="100"/>
+        </columnConstraints>
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            What was your temperature before? (°C)
+        </Label>
+
+        <TextField GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2" fx:id="temperatureBefore">
+
+        </TextField>
+
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            What is your temperature now? (°C)
+        </Label>
+
+        <TextField GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="2" fx:id="temperatureAfter">
+
+        </TextField>
+
+    </GridPane>
+
+    <GridPane fx:id="houseContainerSolar" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"
+              GridPane.rowSpan="5" GridPane.fillWidth="true" visible="false">
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="100"/>
+        </columnConstraints>
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            How much energy do you save in kWh per day?
+        </Label>
+
+        <TextField GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2" fx:id="enerSaved">
+
+        </TextField>
+    </GridPane>
+
+    <GridPane fx:id="houseContainerInsulated" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"
+              GridPane.rowSpan="5" GridPane.fillWidth="true" visible="false">
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="100"/>
+        </columnConstraints>
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            How big is the area you insulated (m2)?
+        </Label>
+
+        <TextField GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2" fx:id="insulated">
+
+        </TextField>
+    </GridPane>
+
+    <GridPane fx:id="produceContainer" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"
+              GridPane.rowSpan="5" GridPane.fillWidth="true" visible="false">
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="100"/>
+        </columnConstraints>
+
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            How much local produce did you buy? (kg)
+        </Label>
+
+        <TextField GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2" fx:id="localProduce">
+
+        </TextField>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="19" GridPane.columnSpan="2" fx:id="wrongInput"
+           text="Please change input to correct values" visible="false" style="-fx-text-fill: red;">
+
+    </Label>
+
+
+    <Button text="Add activity" GridPane.columnIndex="0" GridPane.rowIndex="20" GridPane.columnSpan="2"
+            fx:id="addActivity" onAction="#addActivityOnAction">
+
+    </Button>
+
+    <TableView minHeight="300" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="10"
+               GridPane.hgrow="ALWAYS" fx:id="activitiesTable" onMousePressed="#activitiesTableOnAction">
+        <GridPane.margin>
+            <Insets left="20"/>
+        </GridPane.margin>
+
+    </TableView>
+
+
+</GridPane>

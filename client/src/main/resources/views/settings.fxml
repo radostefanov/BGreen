@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bgreen.app.interfaces.Settings"
+            prefHeight="400.0"
+            fx:id="bp"
+>
+    <padding>
+        <Insets top="20" left="30" right="20" bottom="30"/>
+    </padding>
+
+    <top>
+        <Label text="Settings" styleClass="tab-title-settings" fx:id="tabTitle">
+
+        </Label>
+    </top>
+    <left>
+        <HBox>
+            <VBox styleClass="vbox-style" fx:id="changeData" spacing="5">
+                <padding>
+                    <Insets top="20" left="30" bottom="20" right="30"/>
+                </padding>
+                <Label styleClass="label-settings" fx:id="changeUsername">
+                    Change your username
+                </Label>
+                <TextField promptText="Username" styleClass="field-settings" fx:id="text">
+
+                </TextField>
+                <PasswordField promptText="Provide password" styleClass="field-settings" fx:id="passUsername">
+                </PasswordField>
+                <Button text="Change username" fx:id="confirmUsername">
+                </Button>
+                <Label styleClass="label-settings" fx:id="changePassword">
+                    Change your password
+                </Label>
+                <PasswordField promptText="Password" styleClass="field-settings" fx:id="pass1">
+
+                </PasswordField>
+                <PasswordField promptText="Repeat password" styleClass="field-settings" fx:id="pass2">
+                </PasswordField>
+                <Button text="Change password" fx:id="confirmPassword">
+
+                </Button>
+                <Label styleClass="label-settings" fx:id="changeEmail">
+                    Change your email
+                </Label>
+                <TextField promptText="email@address.com" styleClass="field-settings" fx:id="email1">
+
+                </TextField>
+                <TextField promptText="Please confirm email" styleClass="field-settings" fx:id="email2">
+
+                </TextField>
+                <PasswordField promptText="Provide password" styleClass="field-settings" fx:id="passEmail">
+                </PasswordField>
+                <Button text="Change email" fx:id="confirmEmail">
+
+                </Button>
+            </VBox>
+        </HBox>
+    </left>
+    <right>
+        <VBox alignment="center" styleClass="profile-box" fx:id="profile">
+            <StackPane styleClass="stackpane">
+                <padding>
+                    <Insets top="10" left="10" right="10" bottom="10"/>
+                </padding>
+                <ImageView fitHeight="260" fitWidth="260" styleClass="profile-image" fx:id="userProfile">
+
+                </ImageView>
+            </StackPane>
+            <Button text="Change profile picture" styleClass="profile-button" fx:id="changeImage">
+
+            </Button>
+
+            <HBox styleClass="profile-hbox" fx:id="userInfoBox">
+                <VBox fx:id="leftInfo">
+                    <Label styleClass="profile-label" fx:id="usernameProfile">
+                        Username:
+                    </Label>
+                    <Label styleClass="profile-label" fx:id="emailProfile">
+                        Email address:
+                    </Label>
+                    <Label styleClass="profile-label" fx:id="pointsProfile">
+                        Points:
+                    </Label>
+                    <Label styleClass="profile-label" fx:id="co2Profile">
+                        CO2 spared:
+                    </Label>
+                </VBox>
+                <VBox fx:id="rightInfo">
+                    <Label styleClass="profile-label" fx:id="name">
+                        Username
+                    </Label>
+                    <Label styleClass="profile-label" fx:id="email">
+                        Email
+                    </Label>
+                    <Label styleClass="profile-label" fx:id="pointCount">
+                        0
+                    </Label>
+                    <Label styleClass="profile-label" fx:id="co2">
+                        0
+                    </Label>
+                </VBox>
+            </HBox>
+        </VBox>
+    </right>
+    <bottom>
+        <Button text="Logout" fx:id="logout" styleClass="logout">
+
+        </Button>
+    </bottom>
+
+</BorderPane>

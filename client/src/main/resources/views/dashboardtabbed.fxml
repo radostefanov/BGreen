@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<TabPane fx:id="grid" maxHeight="680.0" maxWidth="1000.0" minHeight="680.0" minWidth="1000.0" prefHeight="680.0" prefWidth="1000.0" side="LEFT" styleClass="tabpane" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="175" tabMaxWidth="85" tabMinHeight="175" tabMinWidth="85" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bgreen.app.interfaces.DashBoardTabbed">
+    <Tab fx:id="dashboard" styleClass="tab">
+        <graphic>
+            <BorderPane>
+                <center>
+                    <ImageView fitHeight="35" GridPane.valignment="CENTER">
+                        <image>
+                            <Image backgroundLoading="true" url="/icons/home.png" />
+                        </image>
+                    </ImageView>
+                </center>
+                <bottom>
+                    <Label styleClass="tab-title" text="Dashboard">
+
+                    </Label>
+                </bottom>
+            </BorderPane>
+        </graphic>
+    </Tab>
+
+    <Tab fx:id="achievements">
+        <graphic>
+            <BorderPane>
+                <center>
+                    <ImageView fitHeight="40" GridPane.valignment="CENTER">
+                        <image>
+                            <Image backgroundLoading="true" url="/icons/achievements.png" />
+                        </image>
+                    </ImageView>
+                </center>
+                <bottom>
+                    <Label styleClass="tab-title" text="Achievements">
+
+                    </Label>
+                </bottom>
+            </BorderPane>
+        </graphic>
+    </Tab>
+
+    <Tab fx:id="leaderboards">
+        <graphic>
+            <BorderPane>
+                <center>
+                    <ImageView fitHeight="33" GridPane.valignment="CENTER">
+                        <image>
+                            <Image backgroundLoading="true" url="/icons/trophy.png" />
+                        </image>
+                    </ImageView>
+                </center>
+                <bottom>
+                    <Label styleClass="tab-title" text="Leaderboards">
+
+                    </Label>
+                </bottom>
+            </BorderPane>
+        </graphic>
+    </Tab>
+
+    <Tab fx:id="challenges">
+        <graphic>
+            <BorderPane>
+                <center>
+                    <ImageView fitHeight="33" GridPane.valignment="CENTER">
+                        <image>
+                            <Image backgroundLoading="true" url="/icons/challenge.png" />
+                        </image>
+                    </ImageView>
+                </center>
+                <bottom>
+                    <Label styleClass="tab-title" text="Challenges">
+
+                    </Label>
+                </bottom>
+            </BorderPane>
+        </graphic>
+    </Tab>
+
+    <Tab fx:id="statistics">
+        <graphic>
+            <BorderPane>
+                <center>
+                    <ImageView fitHeight="33" GridPane.valignment="CENTER">
+                        <image>
+                            <Image backgroundLoading="true" url="/icons/stats.png" />
+                        </image>
+                    </ImageView>
+                </center>
+                <bottom>
+                    <Label styleClass="tab-title" text="Statistics">
+
+                    </Label>
+                </bottom>
+            </BorderPane>
+        </graphic>
+    </Tab>
+
+    <Tab fx:id="friends">
+        <graphic>
+            <BorderPane>
+                <center>
+                    <ImageView fitHeight="30" GridPane.valignment="CENTER">
+                        <image>
+                            <Image backgroundLoading="true" url="/icons/leaderboards.png" />
+                        </image>
+                    </ImageView>
+                </center>
+                <bottom>
+                    <Label styleClass="tab-title" text="Friends">
+
+                    </Label>
+                </bottom>
+            </BorderPane>
+        </graphic>
+    </Tab>
+
+    <Tab fx:id="settings">
+        <graphic>
+            <BorderPane>
+                <center>
+                    <ImageView fitHeight="35" GridPane.valignment="CENTER">
+                        <image>
+                            <Image backgroundLoading="true" url="/icons/settings.png" />
+                        </image>
+                    </ImageView>
+                </center>
+                <bottom>
+                    <Label styleClass="tab-title" text="Settings">
+
+                    </Label>
+                </bottom>
+            </BorderPane>
+        </graphic>
+    </Tab>
+</TabPane>

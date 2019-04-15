@@ -1,0 +1,43 @@
+.button-register {
+    -fx-font-size: 18;
+}
+
+.menu-button{
+    -fx-background-color: #4caf50;
+    -fx-pref-height: 60px;
+    -fx-pref-width: 200px;
+}
+
+.menu-button:hover {
+    -fx-background-color: #388e3c;
+    -fx-scale-x: 1.1;
+}
+
+.menu_bar{
+    -fx-background-color: #4caf50;
+}
+
+
+.password-field {
+    -fx-font-size: 18;
+    -fx-background-color: #c8e6ca;
+    -fx-text-fill: grey;
+}
+
+.text-field {
+    -fx-font-size: 18;
+    -fx-background-color: #c8e6ca;
+    -fx-text-fill: grey;
+
+}
+
+.login-error {
+    -fx-text-fill: red;
+    -fx-font-size: 14;
+}
+
+.grid {
+    -fx-background-color: #4caf50;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}

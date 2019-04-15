@@ -1,0 +1,140 @@
+/*
+    Pie-chart css
+ */
+.chart-pie {
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: lightgrey;
+    -fx-fill: lightgrey;
+}
+
+/*
+    Chart legend
+ */
+.chart-legend {
+    -fx-background-color:  transparent;
+    -fx-padding: 20px;
+}
+
+.chart-legend-item-symbol{
+    -fx-background-radius: 0;
+}
+
+.chart-legend-item{
+    -fx-text-fill: grey;
+}
+
+.color0.chart-pie {
+    -fx-pie-color: #4169E1;
+    -fx-opacity: 0.5;
+}
+
+.color0.chart-pie:hover {
+    -fx-pie-color: #527AF2;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.color1.chart-pie {
+    -fx-pie-color: #8B008B;
+    -fx-opacity: 0.5;
+}
+
+.color1.chart-pie:hover {
+    -fx-pie-color: #9C119C;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+}
+
+.color2.chart-pie {
+    -fx-pie-color: #FFA500;
+    -fx-opacity: 0.5;
+}
+
+.color2.chart-pie:hover {
+    -fx-pie-color: #F0B611;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.color3.chart-pie {
+    -fx-pie-color: #FF4500;
+    -fx-opacity: 0.5;
+}
+
+.color3.chart-pie:hover {
+    -fx-pie-color: #F16722;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.color4.chart-pie {
+    -fx-pie-color: #228B22;
+    -fx-opacity: 0.5;
+}
+
+.color4.chart-pie:hover {
+    -fx-pie-color: #339C33;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.color5.chart-pie {
+    -fx-pie-color: #8b411a;
+    -fx-opacity: 0.5;
+}
+
+.color5.chart-pie:hover {
+    -fx-pie-color: #9c5432;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.color6.chart-pie {
+    -fx-pie-color: #1f8b36;
+    -fx-opacity: 0.5;
+}
+
+.color6.chart-pie:hover {
+    -fx-pie-color: #589c7b;
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.dashboard {
+    -fx-text-fill: black;
+}
+
+.vbox-dashboard {
+    -fx-background-color: #c8e6c9;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-color: grey;
+    /*-fx-opacity: 0.5;*/
+}
+
+.label-dashboard {
+    -fx-padding: 5px, 0px, 5px, 0px;
+    -fx-text-fill: grey;
+}
+
+.label-goal {
+    -fx-padding: 5px, 0px, 5px, 0px;
+    -fx-text-fill: black;
+    -fx-font-size: 20pt;
+    -fx-translate-x: 55px;
+}
+
+.rectangle-dashboard {
+
+}
+
+.label-fixed {
+    -fx-text-fill: black;
+    -fx-font-size: 13pt;
+    -fx-translate-x: 10px;
+}

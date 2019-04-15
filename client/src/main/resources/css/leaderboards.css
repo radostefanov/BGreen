@@ -1,0 +1,38 @@
+.label-settings-leaderboard {
+    -fx-padding: 5px, 0px, 5px, 0px;
+    -fx-text-fill: grey;
+    -fx-font-size: 14pt;
+    -fx-pref-height: 100px;
+}
+
+.leaderboards-table {
+    -fx-alignment: center-left;
+    -fx-pref-height: 195;
+    -fx-border-color: #4caf50;
+}
+
+.leaderboards-button {
+    -fx-translate-y: 50px;
+    -fx-translate-x: 265px;
+}
+
+.leaderboards-column {
+    -fx-background-color: #c8e6ca;
+    -fx-text-alignment: left;
+    -fx-border-color: #666;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5 0 5 0;
+    -fx-alignment: CENTER;
+
+}
+
+.leaderboards-VBox {
+    -fx-padding: 50;
+}
+
+.leaderboards-topHBox{
+    -fx-spacing: 150;
+}
+.leaderboards-bottomHBox{
+    -fx-spacing: 100;
+}

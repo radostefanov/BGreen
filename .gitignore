@@ -1,0 +1,12 @@
+.idea/
+target
+server/target
+client/target
+
+server/src/main/resources/static
+server/src/main/resources/application.properties
+
+server/*.iml
+client/*.iml
+
+*.iml

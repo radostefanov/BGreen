@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.effect.DropShadow?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bgreen.app.interfaces.LoginScreen"
+            prefHeight="1000.0"
+            prefWidth="600.0"
+            styleClass="tabpane"
+            fx:id="pane"
+>
+    <top>
+        <ImageView
+                fx:id="imageView"
+                fitHeight="50"
+                fitWidth="50"
+                translateX="20"
+                translateY="20"
+                pickOnBounds="true"
+                preserveRatio="true"
+        >
+            <image>
+                <Image
+                        url="/icons/tree.png"
+                        backgroundLoading="true"
+                />
+            </image>
+        </ImageView>
+
+    </top>
+    <center>
+        <GridPane
+                alignment="center"
+                maxHeight="350" minHeight="350"
+                minWidth="350" maxWidth="350"
+                styleClass="grid"
+                fx:id="grid"
+                hgap="10"
+                vgap="10"
+        >
+
+            <effect>
+                <DropShadow color="dimgray"/>
+            </effect>
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+            <ImageView
+                    fx:id="userIcon"
+                    fitHeight="35"
+                    fitWidth="35"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="1"
+                    pickOnBounds="true"
+                    preserveRatio="true"
+                    GridPane.valignment="CENTER"
+            >
+                <image>
+                    <Image
+                            url="/icons/user.png"
+                            backgroundLoading="true"
+                    />
+                </image>
+            </ImageView>
+
+            <TextField
+                    fx:id="userText"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="1"
+                    promptText="Username"
+                    GridPane.valignment="CENTER"
+            >
+            </TextField>
+
+            <ImageView
+                    fx:id="passIcon"
+                    fitHeight="35"
+                    fitWidth="35"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="3"
+                    pickOnBounds="true"
+                    preserveRatio="true"
+                    GridPane.valignment="CENTER"
+            >
+                <image>
+                    <Image
+                            url="/icons/locked.png"
+                            backgroundLoading="true"
+                    />
+                </image>
+            </ImageView>
+
+            <PasswordField
+                    fx:id="passwordText"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="3"
+                    promptText="Password"
+                    GridPane.valignment="CENTER"
+                    text=""
+                    onKeyPressed="#pwCheckKeyPressed"
+            >
+            </PasswordField>
+
+            <Button
+                    fx:id="loginButton"
+                    prefWidth="300"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="4"
+                    text="Login"
+                    styleClass="button-light"
+                    onAction="#login"
+            >
+            </Button>
+
+            <Label
+                    fx:id="reg"
+                    styleClass="login-error"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="7"
+                    text=""
+            >
+            </Label>
+
+            <Button
+                    fx:id="registerButton"
+                    prefWidth="300"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="6"
+                    text="Register"
+                    styleClass="button"
+                    onAction="#registerAction"
+            >
+            </Button>
+
+        </GridPane>
+    </center>
+
+</BorderPane>
